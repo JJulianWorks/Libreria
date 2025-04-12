@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Libreria</title>
+</head>
+<body>
+    <h2>Tabla de libros</h2>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>titulo</th>
+                <th>autor</th>
+                <th>categoria</th>
+                <th>año de publicacion</th>
+                <th>paginas</th>
+                <th>precio</th>
+                <th>disponibles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% libreria.forEach(libro => {%>
+                <tr>
+                    <td><%= libro.id %></td>
+                    <td><%= libro.titulo %></td>
+                    <td><%= libro.autor %></td>
+                    <td><%= libro.categoria %></td>
+                    <td><%= libro.anyo %></td>
+                    <td><%= libro.paginas %></td>
+                    <td><%= libro.precio %></td>
+                    <td><%= libro.stock %></td>
+                    <td>
+                        <a href="/consulta/<%= libro.id %>" class="btn waves-effect waves-light">Editar</a>
+                        <a href="/eliminar/<%= libro.id %>" class="btn waves-effect waves-light">Eliminar</a>
+                    </td>
+                </tr>
+            <% }); %>
+    </table>
+    <footer>
+        <p>
+            Creado por Julian
+            <br>
+            Esta pagina solo fue creada por motivos educativos, no se tiene pensado usarlo en negocios
+        </p>
+    </footer>
+</body>
+</html>

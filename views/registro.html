@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Registro del libro</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de libro</h2>
+        <form class="col s20" action="/agregar" method="post">
+            <div class="input-field col s20">
+                <input class="validate" type="text" name="titulo" id="titulo" required>
+                <label for="titulo">Titulo</label>
+            </div>
+            <div class="input-field col s20">
+                <input class="validate" type="text" name="autor" id="autor" required>
+                <label for="autor">Autor</label>
+            </div>
+            <div class="row">
+                <div>
+                    <label>Categoria</label>
+                    <br>
+                    <select class="browser-default col s4" name="categoria" id="categoria">
+                        <option disabled selected>Categorias</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Ciencia ficcion">Ciencia ficcion</option>
+                        <option value="Teatro">Teatro</option>
+                        <option value="Fantasia">Fantasia</option>
+                    </select>
+                </div>
+
+                <div class="input-field col s3">
+                    <input class="validate" type="number" name="anyo" id="anyo" min="1000" max="9999" required>
+                    <label for="anyo">Año de publicacion</label>
+                </div>
+
+                <div class="input-field col s3">
+                    <input class="validate" type="number" name="paginas" id="paginas" min="1" required>
+                    <label for="paginas">Paginas</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s4">
+                    <input class="validate" type="number" name="precio" id="precio" min="1" step="0.01" required>
+                    <label for="precio">Precio</label>
+                </div>
+
+                <div class="input-field col s4">
+                    <input class="validate" type="number" name="stock" id="stock" required>
+                    <label for="stock">Stock</label>
+                </div>
+
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                    Agregar
+                    <i class="material-icons right">add</i>
+                </button>
+            </div>
+        </form>
+        <a href="/principal" class="btn waves-effect waves-light">Volver</a>
+    </div>
+    <footer>
+        <p>
+            Creado por Julian
+            <br>
+            Esta pagina solo fue creada por motivos educativos, no se tiene pensado usarlo en negocios
+        </p>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>
